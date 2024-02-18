@@ -11,7 +11,7 @@
       },
     };
   
-    // Enviar respuesta de error en formato JSON
+    // Enviar respuesta de error en formato JSON 
     res.status(statusCode).json(errorResponse);
   };
   

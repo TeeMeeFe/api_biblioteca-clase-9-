@@ -3,13 +3,12 @@ const router = express.Router();
 
 const { getAllLibros, getLibroById, createLibro, updateLibro, deleteLibro} = require("../controllers/libroController");
 
-
 // Importamos la libreria para validar scopes
 const { requiredScopes } = require("express-oauth2-jwt-bearer");
 
 // Ruta para obtener todos los libros
 router.get("/", requiredScopes("read:libros"), getAllLibros);
-
+ 
 // Ruta para obtener un libro por id
 router.get("/:id", requiredScopes("read:libros"), getLibroById);
 
